@@ -23,19 +23,19 @@ Given("user is on {string} page", { timeout: 40000 }, async function (string) {
 });
 
 When("the user selects the day", async function () {
-  return await clickElement(this.page, "a:nth-child(2)"); // выбор дня
+  return await clickElement(this.page, "a:nth-child(2)");
 });
 
 When("the user select of the hall and session time", async function () {
   return await clickElement(
     this.page,
     ".movie-seances__time[href='#'][data-seance-id='199']"
-  ); // выбор время
+  );
 });
 
 When("the user selects one place", async function () {
-  await clickElement(this.page, ".buying-scheme__row:nth-child(2) .buying-scheme__chair:nth-child(3)"); // выбор места div[class='buying-scheme__wrapper'] div:nth-child(1) span:nth-child(3)
-  await clickElement(this.page, ".acceptin-button"); // нажать на кнопку
+  await clickElement(this.page, ".buying-scheme__row:nth-child(2) .buying-scheme__chair:nth-child(3)");
+  await clickElement(this.page, ".acceptin-button");st
 });
 
 Then("user sees title for one place {string}", async function (string) {
